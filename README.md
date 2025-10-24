@@ -6,10 +6,6 @@
 
 This project demonstrates an end-to-end phishing attack simulation and incident response workflow using Microsoft security tools. The lab simulates a real-world credential phishing attack, token theft, and subsequent security operations center (SOC) analyst investigation and triage.
 
-**Project Duration:** October 2025  
-**Author:** Jay Champaneri  
-**Purpose:** Hands-on security operations and incident response training
-
 ---
 
 ## 🔧 Technologies & Tools Used
@@ -169,28 +165,6 @@ This project demonstrates an end-to-end phishing attack simulation and incident 
 
 ---
 
-## 🎓 Key Findings
-
-### Technical Observations
-
-#### Attack Vector Analysis
-1. **Evilginx Effectiveness:**
-   - Successfully bypassed MFA through man-in-the-middle session hijacking
-   - Token capture enabled persistent access without re-authentication
-   - Traditional MFA (SMS, authenticator app) insufficient against modern phishing
-
-2. **Detection Timing:**
-   - Alerts generated within seconds of suspicious sign-in
-   - Multiple detection layers provided redundancy
-   - Automated risk scoring enabled rapid prioritization
-
-3. **Response Capabilities:**
-   - Built-in remediation workflows (password reset enforcement)
-   - Centralized incident management across security products
-   - Comprehensive audit trail for forensic analysis
-
----
-
 ### Security Posture Assessment
 
 **Strengths:**
@@ -237,30 +211,6 @@ This project demonstrates an end-to-end phishing attack simulation and incident 
 
 ---
 
-### SOC Analyst Core Skills
-
-#### Detection Engineering
-- Configured detection rules and policies
-- Tuned alert thresholds to reduce false positives
-- Correlated events across multiple security products
-
-#### Threat Hunting
-- Analyzed user behavior anomalies
-- Investigated suspicious authentication patterns
-- Identified indicators of compromise (IOCs)
-
-#### Forensics
-- Parsed email headers and authentication records
-- Reconstructed attack timeline from logs
-- Extracted artifacts for threat intelligence
-
-#### Communication
-- Documented incidents with clear narratives
-- Created visual representations (incident graphs)
-- Provided actionable remediation recommendations
-
----
-
 ## 📚 Lessons Learned
 
 ### What Went Well
@@ -300,32 +250,6 @@ This project demonstrates an end-to-end phishing attack simulation and incident 
    - Balancing security controls with usability
    - Avoiding alert fatigue with too many low-severity alerts
    - Fine-tuning phishing thresholds to catch threats without blocking legitimate email
-
----
-
-### Key Takeaways
-
-#### For Aspiring SOC Analysts
-
-1. **Understand the Attacker's Perspective:**
-   - Building the attack helps you understand detection logic
-   - Knowing how tools like Evilginx work improves defensive capabilities
-   - Adversary simulation is critical for validation
-
-2. **Master Your Security Stack:**
-   - Deep product knowledge accelerates investigation
-   - Understanding data flows between security products is essential
-   - Documentation and hands-on practice are equally important
-
-3. **Document Everything:**
-   - Detailed notes enable faster incident response
-   - Screenshots and logs are critical for reporting
-   - Clear documentation supports knowledge transfer
-
-4. **Think Like an Investigator:**
-   - Always ask "what happened, how, when, and why?"
-   - Build timelines to understand attack sequences
-   - Correlate data from multiple sources for complete picture
 
 ---
 
@@ -435,54 +359,6 @@ SigninLogs
    - Automated incident reports
    - Executive dashboard creation
    - Compliance reporting workflows
-
----
-
-#### Phase 18: Extended Detection Scenarios
-
-**Additional Attack Simulations:**
-
-1. **Malware Analysis:**
-   - Deploy malware sandbox (Any.Run, Joe Sandbox)
-   - Analyze malicious attachments
-   - Document behavioral indicators
-
-2. **Lateral Movement:**
-   - Simulate internal reconnaissance
-   - Test network segmentation
-   - Validate detection of lateral movement
-
-3. **Data Exfiltration:**
-   - Simulate data theft scenarios
-   - Test DLP (Data Loss Prevention) policies
-   - Validate cloud app monitoring
-
-4. **Ransomware Simulation:**
-   - Safe ransomware behavior testing
-   - Backup and recovery validation
-   - Incident response plan testing
-
----
-
-### Advanced Topics to Explore
-
-#### Log Analysis & Forensics
-- Advanced KQL query development
-- Log correlation across platforms
-- Timeline analysis techniques
-- Memory forensics for compromised systems
-
-#### Threat Hunting
-- Proactive threat hunting methodologies
-- Hypothesis-driven investigations
-- IOC and IOA (Indicators of Attack) development
-- Threat intelligence operationalization
-
-#### Security Architecture
-- Zero Trust implementation strategies
-- Network segmentation best practices
-- Identity-centric security models
-- Secure by design principles
 
 ---
 
@@ -626,35 +502,6 @@ phishing-lab-project/
 
 ---
 
-### For Fellow Students
-
-**Learning Path Recommendations:**
-
-1. **Start with Fundamentals:**
-   - CompTIA Security+
-   - Microsoft Security, Compliance, and Identity Fundamentals (SC-900)
-   - Basic networking and operating systems
-
-2. **Build Practical Skills:**
-   - Set up home lab environments
-   - Practice with free security tools
-   - Participate in Capture the Flag (CTF) competitions
-   - Contribute to open-source security projects
-
-3. **Specialize in Detection & Response:**
-   - Microsoft Security Operations Analyst (SC-200)
-   - Certified SOC Analyst (CSA)
-   - GIAC Security Essentials (GSEC)
-   - Hands-on labs like this project
-
-4. **Network and Share:**
-   - Document your projects on GitHub
-   - Write blog posts or LinkedIn articles
-   - Attend security conferences and meetups
-   - Connect with professionals in the field
-
----
-
 ## 🔗 Resources & References
 
 ### Microsoft Documentation
@@ -675,36 +522,6 @@ phishing-lab-project/
 - [MITRE ATT&CK Framework](https://attack.mitre.org/)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [SANS Incident Response Process](https://www.sans.org/white-papers/)
-
----
-
-## 🤝 Connect With Me
-
-**Jay Champaneri**
-
-- 💼 LinkedIn: [Connect with me](#) *(Add your LinkedIn URL)*
-- 🐱 GitHub: [@your-username](#) *(Add your GitHub profile)*
-- 📧 Email: your.email@example.com *(Add your professional email)*
-- 🌐 Portfolio: [your-website.com](#) *(Optional)*
-
-**Career Goal:** SOC Analyst specializing in threat detection, incident response, and Microsoft security technologies
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-**Special Thanks:**
-
-- **Caroline Curtis** (NZ Police, Cyber Security) - For mentorship and guidance on SOC analyst skill development
-- **Microsoft Security Community** - For comprehensive documentation and training resources
-- **Summer of Tech Programme** - For connecting aspiring cybersecurity professionals with industry mentors
-- **Open Source Security Community** - For tools like Evilginx that enable realistic security testing
 
 ---
 
