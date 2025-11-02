@@ -1,5 +1,7 @@
 🏗️ Architecture
+```
 ![Playbook Workflow](07-Automate Incident Reporting/Playbook.png)
+```
 
 ## 🔍 Step-by-Step Breakdown
 
