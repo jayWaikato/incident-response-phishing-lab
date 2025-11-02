@@ -4,6 +4,8 @@
 
 **Objective:** Deploy advanced man-in-the-middle phishing infrastructure
 
+![](evilginx-azure-token.png)
+
 #### 5.1 Evilginx Installation & Configuration
 
 **Attack Machine Details:**
