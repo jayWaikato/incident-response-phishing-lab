@@ -1,5 +1,6 @@
 🏗️ Architecture
 Playbook Workflow
+!(Playbook.png)
 
 ## 🔍 Step-by-Step Breakdown
 
