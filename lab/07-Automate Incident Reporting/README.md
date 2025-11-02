@@ -2,6 +2,8 @@
 
 ![Playbook Workflow](Playbook.png)
 
+![Logic app](logic_app_resource.jpg)
+
 ## 🔍 Step-by-Step Breakdown
 
 ### Step 1: Trigger - Microsoft Sentinel Incident
