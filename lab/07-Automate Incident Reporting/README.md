@@ -1,52 +1,6 @@
 🏗️ Architecture
 Playbook Workflow
 
-```mermaid
-graph TD
-    A[Microsoft Sentinel] -->|New Incident Detected| B[Trigger: Incident Creation]
-    B --> C[Action 1: Select Entities]
-    C --> D[Action 2: Create HTML Table - Entities]
-    D --> E[Action 3: Select Alerts]
-    E --> F[Action 4: Create HTML Table - Alerts]
-    F --> G[Action 5: Compose Entity Count]
-    G --> H[Action 6: Compose Email Response]
-    H --> I[Action 7: Send Email]
-    I --> J[Security Team Notified]
-    
-    style A fill:#0078D4,color:#fff
-    style B fill:#00BCF2,color:#fff
-    style C fill:#7FBA00,color:#fff
-    style D fill:#7FBA00,color:#fff
-    style E fill:#7FBA00,color:#fff
-    style F fill:#7FBA00,color:#fff
-    style G fill:#FFB900,color:#000
-    style H fill:#FFB900,color:#000
-    style I fill:#E81123,color:#fff
-    style J fill:#00B294,color:#fff
-```
-    
-Data Flow
-Sentinel Incident
-    ↓
-Extract Related Entities (Accounts, IPs, URLs, Files, etc.)
-    ↓
-Parse into HTML Table for readability
-    ↓
-Extract Associated Alerts (Detection rules triggered)
-    ↓
-Parse into HTML Table
-    ↓
-Calculate Metrics (Entity count, Alert count, Severity)
-    ↓
-Compose Rich HTML Email with:
-    • Executive Summary
-    • Timeline
-    • MITRE ATT&CK Tactics
-    • Entity & Alert Details
-    • Recommended Actions
-    ↓
-Send to Security Operations Team
-
 🔍 Step-by-Step Breakdown
 Step 1: Trigger - Microsoft Sentinel Incident
 Purpose: Monitors Microsoft Sentinel for new incident creation
