@@ -79,11 +79,6 @@ UnifiedSignInLogs
 | where UniqueIPs > 3 // Multiple locations in 24h
 ```
 
-### Benefits
-- ✅ **60% faster query execution** - Single scan instead of multiple joins
-- ✅ **Consistent field formats** - No more type conversion errors
-- ✅ **Better correlation** - Easy to spot attack chains
-- ✅ **Reusable function** - Save as Sentinel function for org-wide use
 
 ### Credit
 Original concept by **Fabian Bader** - Enhanced with additional fields and token protection telemetry.
