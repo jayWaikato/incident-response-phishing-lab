@@ -8,10 +8,6 @@
 #### 10.1 Incident Overview
 
 **Incidents Dashboard:**
-- **Time Range:** 1 Week
-- **Total Incidents:** 4
-
-**Incident Breakdown:**
 
 ![](incidents-dashboard.png)
 
