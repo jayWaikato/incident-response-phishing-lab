@@ -1,5 +1,7 @@
 ### Phase 3: Microsoft Defender for Office 365 Setup
 
+![](preset-security-policies.png)
+
 **Objective:** Implement email security controls and threat detection
 
 #### 3.1 Preset Security Policies
