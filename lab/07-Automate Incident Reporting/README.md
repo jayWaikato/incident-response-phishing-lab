@@ -2,7 +2,8 @@
 
 ![Playbook Workflow](Playbook.png)
 
-![Logic app](logic_app_resource.jpg)
+![Logic app](logic_app_resource.jpg)*Logic app Resource visualizer*
+
 
 ## 🔍 Step-by-Step Breakdown
 
