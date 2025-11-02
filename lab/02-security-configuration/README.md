@@ -29,7 +29,7 @@ Configured three-tier protection model:
 - User Impersonation Protection: **Enabled** (0 users configured)
 - Domain Impersonation Protection: **Off** for owned domains
 
-**Screenshot Reference:** `06-anti-phishing-policy.png`
+**Screenshot Reference:** ![](anti-phishing-policy.png)
 
 #### 3.3 Safe Links Policy
 
@@ -40,7 +40,7 @@ Configured three-tier protection model:
 - ✅ Wait for URL scanning to complete before message delivery
 - ✅ Do not rewrite URLs (checks via Safe Links API only)
 
-**Screenshot Reference:** `07-safe-links-policy.png`
+**Screenshot Reference:** ![](safe-links-policy.png)
 
 ---
 
@@ -55,7 +55,7 @@ Configured three-tier protection model:
   - 🟠 **Medium** - Unfamiliar sign-in properties
   - 🟢 **Low** - Atypical travel, API token activity
 
-**Screenshot Reference:** `08-defender-alerts.png`
+**Screenshot Reference:** ![](defender-alerts.png)
 
 #### 4.2 Identity Management
 
@@ -64,8 +64,6 @@ Configured three-tier protection model:
 - Critical Priority: **1** (Administrator account)
 - Disabled Accounts: **3**
 - Service Accounts: **296**
-
-**Screenshot Reference:** `09-identities-overview.png`
 
 #### 4.3 Cloud Activity Monitoring
 
@@ -81,6 +79,6 @@ Configured three-tier protection model:
 
 **Alerts:** Create alert for each matching event
 
-**Screenshot Reference:** `10-cloud-activity-policy.png`
+**Screenshot Reference:** ![](cloud-activity-policy.png)
 
 ---
