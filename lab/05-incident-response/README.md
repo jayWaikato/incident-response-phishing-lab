@@ -40,8 +40,6 @@ Sign-in exhibited unfamiliar properties:
 
 **Alert Triggered By:** Microsoft Entra ID Protection detection
 
-**Screenshot Reference:** `19-incident-unfamiliar-signin-timeline.png`
-
 ---
 
 **Alert Management:**
@@ -51,7 +49,7 @@ Sign-in exhibited unfamiliar properties:
 **Classification:** True positive - Phishing  
 **Comment:** "Remediated with password change"
 
-**Screenshot Reference:** `20-alert-management-resolution.png`
+**Screenshot Reference:**  ![](20-alert-management-resolution.png)
 
 ---
 
@@ -78,7 +76,7 @@ Sign-in exhibited unfamiliar properties:
 1. `161.29.226.90`
 2. `20.124.88.102`
 
-**Screenshot Reference:** `21-atypical-travel-incident-graph.png`
+**Screenshot Reference:**   ![](atypical-travel-incident-graph.png)
 
 ---
 
@@ -95,7 +93,7 @@ Sign-in exhibited unfamiliar properties:
 - **Entity:** internal threat
 - **Risk Level:** -
 
-**Screenshot Reference:** `22-atypical-travel-summary.png`
+**Screenshot Reference:**   ![](atypical-travel-summary.png)
 
 ---
 
@@ -108,7 +106,7 @@ Sign-in exhibited unfamiliar properties:
 **Status:** In Progress  
 **Classification:** True positive - Compromised account
 
-**Screenshot Reference:** `23-atypical-travel-management.png`
+**Screenshot Reference:**   ![](atypical-travel-management.png)
 
 ---
 
@@ -125,8 +123,6 @@ Sign-in exhibited unfamiliar properties:
   - 👤 jay champaneri
   - 🌐 Microsoft 365
 - **Active Alerts:** 5/5
-
-**Screenshot Reference:** `24-api-token-incident.png`
 
 ---
 
@@ -151,8 +147,6 @@ The alert evaluates past sign-in properties including:
 **Detection Trigger:**
 Sign-ins with unfamiliar properties across multiple dimensions are flagged as potentially malicious.
 
-**Screenshot Reference:** `25-alert-detection-explanation.png`
-
 ---
 
 #### 11.2 Security Activities Timeline
@@ -169,8 +163,6 @@ Sign-ins with unfamiliar properties across multiple dimensions are flagged as po
 **Risky Sign-in Events (2 recorded):**
 1. **11:24:36 PM** - Sign in | internal threat | 20.124.88.102 | Washington, Virginia, US | remediated
 2. **11:24:29 PM** - Sign in | internal threat | 20.124.88.102 | Washington, Virginia, US | remediated
-
-**Screenshot Reference:** `26-security-timeline.png`
 
 ---
 
@@ -190,8 +182,6 @@ Sign-ins with unfamiliar properties across multiple dimensions are flagged as po
 2. ✅ Forced password reset for `jayinternalthreat@studmemt.onmicrosoft.com`
 3. ✅ Revoked all active sessions
 4. ✅ Documented incident for threat intelligence
-
-**Screenshot Reference:** `27-alert-triage-resolution.png`
 
 ---
 
