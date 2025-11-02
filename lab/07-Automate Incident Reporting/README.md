@@ -39,15 +39,6 @@
   - MITRE ATT&CK tactics
   - Timeline information
 
-**Real-World Example:**
-```
-Incident Detected: "Unfamiliar sign-in properties involving one user"
-Severity: Medium
-Entities: 1 user account, 1 IP address
-Alerts: "Risky sign-in detected from unusual location"
-→ Playbook triggered automatically
-```
-
 ---
 
 ### Step 2: Select Entities
