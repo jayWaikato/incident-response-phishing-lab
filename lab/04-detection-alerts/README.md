@@ -26,7 +26,7 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 - New EASId (Exchange ActiveSync ID)
 - New TenantIPSubnet
 
-**Screenshot Reference:** `12-unfamiliar-signin-alert.png`
+**Screenshot Reference:** ![](unfamiliar-signin-alert.png)
 
 #### 8.2 Risky Sign-in Timeline
 
@@ -36,7 +36,7 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 
 **Sign-in Request ID:** b7d51d98-b580-48a2-8fac-9e2ba1ca1500
 
-**Screenshot Reference:** `13-risky-signin-timeline.png`
+**Screenshot Reference:** ![](risky-signin-timeline.png)
 
 ---
 
@@ -51,8 +51,6 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 - **Severity:** Low
 - **Category:** Suspicious activity
 - **Detection Source:** Microsoft Defender for Cloud Apps
-
-**Screenshot Reference:** `14-api-token-alerts.png`
 
 #### 9.2 Email Quarantine Analysis
 
@@ -71,7 +69,7 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 - **Original Threats:** Phish / Normal
 - **Detection Technologies:** Advanced filter
 
-**Screenshot Reference:** `15-email-quarantine.png`
+**Screenshot Reference:**  ![](email-quarantine.png)
 
 #### 9.3 Email Header Analysis
 
@@ -92,7 +90,7 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 - Cipher: TLS_AES_256_GCM_SHA384
 - Microsoft SMTP Server ID: 15.20.9253.13
 
-**Screenshot Reference:** `16-message-header-analyzer.png`
+**Screenshot Reference:**  ![](message-header-analyzer.png)
 
 #### 9.4 Threat Detection in Microsoft Defender
 
@@ -108,6 +106,6 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 - **Policy Action:** Quarantine
 - **Email Size:** 118759 bytes
 
-**Screenshot Reference:** `17-email-threat-detection.png`
+**Screenshot Reference:**  ![](email-threat-detection.png)
 
 ---
