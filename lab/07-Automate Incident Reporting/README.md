@@ -420,100 +420,9 @@ Alerts: "Risky sign-in detected from unusual location"
 
 ---
 
-## 🎨 Email Template Preview
-
-### Desktop View
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                  [Company Logo]                          │
-│          Security Incident Report                        │
-│                                                          │
-│        🔴 MEDIUM SEVERITY INCIDENT                       │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  Executive Summary                                       │
-│  ───────────────                                        │
-│  Incident Title: Unfamiliar sign-in properties          │
-│  Incident Number: 20                                     │
-│  Description: Sign-in from unusual location detected    │
-│                                                          │
-│  ┌────────┐  ┌────────┐  ┌────────┐                   │
-│  │   3    │  │   2    │  │ Medium │                   │
-│  │ Alerts │  │Entities│  │Severity│                   │
-│  └────────┘  └────────┘  └────────┘                   │
-│                                                          │
-│  Timeline                                                │
-│  ────────                                               │
-│  ├─ First Activity: 23/10/2025 23:24:36                │
-│  ├─ Incident Created: 23/10/2025 23:25:01              │
-│  └─ Notification Sent: 02/11/2025 15:56:00             │
-│                                                          │
-│  MITRE ATT&CK Tactics                                   │
-│  ────────────────────                                  │
-│  • Initial Access                                       │
-│  • Credential Access                                    │
-│                                                          │
-│  Related Entities                                        │
-│  ───────────────                                        │
-│  ┌────────────────────────────────┬───────────┐       │
-│  │ Entity                          │ Type      │       │
-│  ├────────────────────────────────┼───────────┤       │
-│  │ jayinternalthreat@studmemt.com │ Account   │       │
-│  │ 20.124.88.102                  │ IP        │       │
-│  └────────────────────────────────┴───────────┘       │
-│                                                          │
-│  Associated Alerts                                       │
-│  ─────────────────                                      │
-│  ┌───────────────────────────────────────────┐         │
-│  │ Alert                                      │         │
-│  ├───────────────────────────────────────────┤         │
-│  │ Unfamiliar sign-in properties              │         │
-│  │ Atypical travel detected                   │         │
-│  └───────────────────────────────────────────┘         │
-│                                                          │
-│  ⚠️  Recommended Actions                                │
-│  • Review incident in Sentinel                          │
-│  • Investigate entities and alerts                      │
-│  • Verify legitimacy of activity                        │
-│  • Document findings                                    │
-│  • Update incident status                               │
-│                                                          │
-│          [Investigate in Sentinel →]                    │
-│                                                          │
-├─────────────────────────────────────────────────────────┤
-│  Automated security alert from Microsoft Sentinel       │
-│  Contact: security@company.com                          │
-│  © 2025 Security Operations Center                      │
-└─────────────────────────────────────────────────────────┘
-```
+![Email](playbook_email.pdf)
 
 ---
-
-## ⚙️ Configuration Parameters
-
-### Customizable Settings
-
-```json
-"parameters": {
-    "SecOpsEmail": {
-        "defaultValue": "security@company.com",
-        "type": "String"
-    },
-    "dateTimeFormat": {
-        "defaultValue": "dd/MM/yyyy HH:mm:ss",
-        "type": "String"
-    },
-    "emailLogoHeader": {
-        "defaultValue": "https://your-logo-url.com/logo.png",
-        "type": "String"
-    },
-    "reportName": {
-        "defaultValue": "Security Incident Report",
-        "type": "String"
-    }
-}
-```
 
 **Customization Guide:**
 
@@ -523,31 +432,6 @@ Alerts: "Risky sign-in detected from unusual location"
 | **dateTimeFormat** | Timestamp format | `MM/dd/yyyy HH:mm:ss` (US), `dd/MM/yyyy HH:mm:ss` (NZ) |
 | **emailLogoHeader** | Company branding | Your hosted logo URL |
 | **reportName** | Email title | `[Company] Security Alert`, `SOC Incident Report` |
-
----
-
-## 📊 Performance Metrics
-
-### Playbook Execution Statistics
-
-| Metric | Value | Impact |
-|--------|-------|--------|
-| **Average Execution Time** | 8-15 seconds | From incident creation to email delivery |
-| **Success Rate** | 99.8% | Based on 1000+ runs |
-| **Actions per Run** | 7 | Fully automated pipeline |
-| **Manual Time Saved** | 5-10 minutes per incident | Analyst time freed for investigation |
-
-### Cost Analysis
-
-**Azure Logic App Pricing (Consumption Plan):**
-- Per action execution: $0.000025 USD
-- Actions per run: 7
-- Cost per incident: **$0.000175 USD**
-
-**Monthly projection (assuming 100 incidents/month):**
-- Total cost: **$0.0175 USD/month**
-- Manual analyst time saved: **8-16 hours/month**
-- ROI: **Virtually free automation with massive time savings**
 
 ---
 
@@ -568,14 +452,6 @@ Required Permissions:
 - Mail.Send (Send emails on behalf of service account)
 ```
 
-### Data Handling
-
-**Sensitive Information:**
-- ✅ User principal names
-- ✅ IP addresses
-- ✅ Device names
-- ✅ Email subjects/content
-
 **Best Practices:**
 1. ⚠️ **Restrict email distribution** to authorized SOC personnel only
 2. ⚠️ **Use service account** for Logic App connections (not personal accounts)
@@ -584,8 +460,6 @@ Required Permissions:
 5. ⚠️ **Consider data classification** for email content
 
 ---
-
-## 🚀 Deployment Guide
 
 ### Prerequisites
 
