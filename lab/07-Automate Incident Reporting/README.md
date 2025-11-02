@@ -129,11 +129,8 @@
 ```
 
 **Why HTML Tables:**
-- ✅ **Professional appearance** in email clients
 - ✅ **Easy to scan** for SOC analysts
 - ✅ **Maintains structure** across different email platforms
-- ✅ **Supports styling** for visual hierarchy
-
 ---
 
 ### Step 4: Select Alerts
