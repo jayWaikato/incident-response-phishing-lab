@@ -1,5 +1,7 @@
 ## ⚙️ Environment Setup
 
+![](user-risk-policy.png)
+
 ### Phase 1: Azure Infrastructure Deployment
 
 **Objective:** Create isolated cloud environment for security testing
