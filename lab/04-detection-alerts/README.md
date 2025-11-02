@@ -30,12 +30,7 @@ Sign-in properties were unfamiliar compared to user's typical behavior:
 
 #### 8.2 Risky Sign-in Timeline
 
-**Timeline of Malicious Activity:**
-
-| Time | Event | User | IP Address | Location | Risk State |
-|------|-------|------|------------|----------|------------|
-| Oct 23, 2025 11:24:36 PM | Sign in | internal threat | 20.124.88.102 | Washington, Virginia, US | remediated |
-| Oct 23, 2025 11:24:29 PM | Sign in | internal threat | 20.124.88.102 | Washington, Virginia, US | remediated |
+![](risky-signin-timeline.png)
 
 **User Agent:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0 OS/10.0.19044
 
