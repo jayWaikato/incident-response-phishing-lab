@@ -1,6 +1,6 @@
 🏗️ Architecture
 Playbook Workflow
-!(Playbook.png)
+!(07-Automate Incident Reporting/Playbook.png)
 
 ## 🔍 Step-by-Step Breakdown
 
