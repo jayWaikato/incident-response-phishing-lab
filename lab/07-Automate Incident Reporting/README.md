@@ -1,6 +1,6 @@
 🏗️ Architecture
 Playbook Workflow
-mermaidgraph TD
+graph TD
     A[Microsoft Sentinel] -->|New Incident Detected| B[Trigger: Incident Creation]
     B --> C[Action 1: Select Entities]
     C --> D[Action 2: Create HTML Table - Entities]
