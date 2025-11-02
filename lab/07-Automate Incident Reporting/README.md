@@ -1,5 +1,7 @@
 🏗️ Architecture
 Playbook Workflow
+
+```mermaid
 graph TD
     A[Microsoft Sentinel] -->|New Incident Detected| B[Trigger: Incident Creation]
     B --> C[Action 1: Select Entities]
@@ -21,6 +23,8 @@ graph TD
     style H fill:#FFB900,color:#000
     style I fill:#E81123,color:#fff
     style J fill:#00B294,color:#fff
+```
+    
 Data Flow
 Sentinel Incident
     ↓
