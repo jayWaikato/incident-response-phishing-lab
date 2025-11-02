@@ -13,14 +13,7 @@
 
 **Incident Breakdown:**
 
-| # | Incident Name | ID | Tags | Severity | Investigation State | Categories | Impacted Assets | Active Alerts |
-|---|---------------|----|----|----------|---------------------|------------|-----------------|---------------|
-| 1 | Unfamiliar sign-in properties involving one user | 20 | - | 🟠 Medium | Initial access | 👤 internal threat | 0/1 |
-| 2 | Atypical travel involving one user | 24 | Critical asset | 🟢 Low | Initial access | 👤 internal threat | 0/1 |
-| 3 | api token involving one user | 17 | Critical asset | 🟢 Low | Suspicious activity | 👤 jay champaneri 🌐 Microsoft 365 | 5/5 |
-| 4 | Unfamiliar sign-in properties involving one user | 21 | - | 🟠 Medium | Initial access | 👤 internal threat | 0/1 |
-
-**Screenshot Reference:** `18-incidents-dashboard.png`
+![](incidents-dashboard.png)
 
 ---
 
