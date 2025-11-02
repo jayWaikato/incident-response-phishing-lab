@@ -1,7 +1,6 @@
 🏗️ Architecture
-```
-![Playbook Workflow](07-Automate Incident Reporting/Playbook.png)
-```
+
+![Playbook Workflow](incident-response-phishing-lab/lab/07-Automate Incident Reporting/Playbook.png)
 
 ## 🔍 Step-by-Step Breakdown
 
