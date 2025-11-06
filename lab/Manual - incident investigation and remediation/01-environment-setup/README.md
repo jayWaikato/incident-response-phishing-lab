@@ -1,7 +1,7 @@
 ## ⚙️ Environment Setup
 
-![](user-risk-policy.png)
-
+![](licenses.png)
+git 
 ### Phase 1: Azure Infrastructure Deployment
 
 **Objective:** Create isolated cloud environment for security testing
@@ -22,6 +22,8 @@
 ### Phase 2: Microsoft 365 Security Stack Configuration
 
 **Objective:** Deploy enterprise-grade security tools for detection and response
+
+![](user-risk-policy.png)
 
 #### 2.1 License Procurement & Assignment
 - ✅ **Microsoft Entra ID P2** - Advanced identity protection and conditional access
