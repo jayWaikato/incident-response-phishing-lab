@@ -1,0 +1,76 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspace": {
+            "type": "String"
+        }
+    },
+    "resources": [
+        {
+            "id": "[concat(resourceId('Microsoft.OperationalInsights/workspaces/providers', parameters('workspace'), 'Microsoft.SecurityInsights'),'/alertRules/e565fb63-7ff9-4e75-bc0c-b488c0e0e23f')]",
+            "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/e565fb63-7ff9-4e75-bc0c-b488c0e0e23f')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
+            "kind": "Scheduled",
+            "apiVersion": "2023-12-01-preview",
+            "properties": {
+                "displayName": "High-Risk Phishing Email Delivered",
+                "description": "",
+                "severity": "High",
+                "enabled": true,
+                "query": "EmailEvents\r\n| where TimeGenerated > ago(5m)\r\n| where EmailDirection == \"Inbound\"\r\n| where DeliveryAction in (\"Delivered\", \"DeliveredAsSpam\")\r\n| where Subject has_any (\"urgent\", \"verify\", \"suspended\", \"confirm\", \"unusual activity\")\r\n    or SenderFromAddress matches regex @\"[0-9]{4,}\"\r\n| where RecipientEmailAddress endswith \"@yourdomain.com\"  // Change this to your domain\r\n| join kind=leftouter (\r\n    EmailUrlInfo\r\n    | where TimeGenerated > ago(5m)\r\n    | summarize URLCount = count() by NetworkMessageId\r\n) on NetworkMessageId\r\n| where URLCount > 2 or isnotnull(URLCount)\r\n| project TimeGenerated, SenderFromAddress, RecipientEmailAddress, Subject, URLCount",
+                "queryFrequency": "PT5M",
+                "queryPeriod": "PT5M",
+                "triggerOperator": "GreaterThan",
+                "triggerThreshold": 0,
+                "suppressionDuration": "PT5H",
+                "suppressionEnabled": false,
+                "startTimeUtc": null,
+                "tactics": [
+                    "InitialAccess"
+                ],
+                "techniques": [
+                    "T1566"
+                ],
+                "subTechniques": [],
+                "alertRuleTemplateName": null,
+                "incidentConfiguration": {
+                    "createIncident": true,
+                    "groupingConfiguration": {
+                        "enabled": true,
+                        "reopenClosedIncident": true,
+                        "lookbackDuration": "PT5H",
+                        "matchingMethod": "AllEntities",
+                        "groupByEntities": [],
+                        "groupByAlertDetails": [],
+                        "groupByCustomDetails": []
+                    }
+                },
+                "eventGroupingSettings": {
+                    "aggregationKind": "SingleAlert"
+                },
+                "alertDetailsOverride": {
+                    "alertDisplayNameFormat": "Alert from email",
+                    "alertDescriptionFormat": "Alert from {{RecipientEmailAddress}} generate at {{{TimeGenerated}} ",
+                    "alertDynamicProperties": []
+                },
+                "customDetails": {
+                    "email": "Subject"
+                },
+                "entityMappings": [
+                    {
+                        "entityType": "Account",
+                        "fieldMappings": [
+                            {
+                                "identifier": "FullName",
+                                "columnName": "RecipientEmailAddress"
+                            }
+                        ]
+                    }
+                ],
+                "sentinelEntitiesMappings": null,
+                "templateVersion": null
+            }
+        }
+    ]
+}

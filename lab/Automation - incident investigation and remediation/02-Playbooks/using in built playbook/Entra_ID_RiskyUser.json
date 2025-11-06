@@ -1,0 +1,136 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "contentVersion": "1.0.0.0",
+        "triggers": {
+            "Microsoft_Sentinel_incident": {
+                "type": "ApiConnectionWebhook",
+                "inputs": {
+                    "body": {
+                        "callback_url": "@{listCallbackUrl()}"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                        }
+                    },
+                    "path": "/incident-creation"
+                }
+            }
+        },
+        "actions": {
+            "Entities_-_Get_Accounts": {
+                "type": "ApiConnection",
+                "inputs": {
+                    "body": "@triggerBody()?['object']?['properties']?['relatedEntities']",
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/entities/account"
+                }
+            },
+            "For_each": {
+                "foreach": "@body('Entities_-_Get_Accounts')?['Accounts']",
+                "actions": {
+                    "Add_comment_to_incident_(V3)": {
+                        "runAfter": {
+                            "Confirm_a_risky_user_as_compromised": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "ApiConnection",
+                        "inputs": {
+                            "body": {
+                                "incidentArmId": "@triggerBody()?['object']?['id']",
+                                "message": "<p>User [@{concat(items('For_each')?['Name'], '@', items('For_each')?['UPNSuffix'])}] was confirmed compromised via playbook.</p>"
+                            },
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                                }
+                            },
+                            "method": "post",
+                            "path": "/Incidents/Comment"
+                        }
+                    },
+                    "Confirm_a_risky_user_as_compromised": {
+                        "runAfter": {
+                            "Get_user": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "ApiConnection",
+                        "inputs": {
+                            "body": {
+                                "userIds": [
+                                    "@body('Get_user')?['id']"
+                                ]
+                            },
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['azureadip']['connectionId']"
+                                }
+                            },
+                            "method": "post",
+                            "path": "/beta/riskyUsers/confirmCompromised"
+                        }
+                    },
+                    "Get_user": {
+                        "type": "ApiConnection",
+                        "inputs": {
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['azuread']['connectionId']"
+                                }
+                            },
+                            "method": "get",
+                            "path": "/v1.0/users/@{encodeURIComponent(concat(items('For_each')?['Name'], '@', items('For_each')?['UPNSuffix']))}"
+                        }
+                    }
+                },
+                "runAfter": {
+                    "Entities_-_Get_Accounts": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Foreach"
+            }
+        },
+        "parameters": {
+            "$connections": {
+                "type": "Object",
+                "defaultValue": {}
+            }
+        }
+    },
+    "parameters": {
+        "$connections": {
+            "type": "Object",
+            "value": {
+                "azuread": {
+                    "id": "/subscriptions/e4c18f04-ee94-44fa-986e-e45be35cb293/providers/Microsoft.Web/locations/eastus/managedApis/azuread",
+                    "connectionId": "/subscriptions/e4c18f04-ee94-44fa-986e-e45be35cb293/resourceGroups/data_traiage/providers/Microsoft.Web/connections/azuread-Confirm-EntraIDRiskyUser-Incident",
+                    "connectionName": "azuread-Confirm-EntraIDRiskyUser-Incident"
+                },
+                "azureadip": {
+                    "id": "/subscriptions/e4c18f04-ee94-44fa-986e-e45be35cb293/providers/Microsoft.Web/locations/eastus/managedApis/azureadip",
+                    "connectionId": "/subscriptions/e4c18f04-ee94-44fa-986e-e45be35cb293/resourceGroups/data_traiage/providers/Microsoft.Web/connections/azureadip-Confirm-EntraIDRiskyUser-Incident",
+                    "connectionName": "azureadip-Confirm-EntraIDRiskyUser-Incident"
+                },
+                "azuresentinel": {
+                    "id": "/subscriptions/e4c18f04-ee94-44fa-986e-e45be35cb293/providers/Microsoft.Web/locations/eastus/managedApis/azuresentinel",
+                    "connectionId": "/subscriptions/e4c18f04-ee94-44fa-986e-e45be35cb293/resourceGroups/data_traiage/providers/Microsoft.Web/connections/azuresentinel-Confirm-EntraIDRiskyUser-Incident",
+                    "connectionName": "azuresentinel-Confirm-EntraIDRiskyUser-Incident",
+                    "connectionProperties": {
+                        "authentication": {
+                            "type": "ManagedServiceIdentity"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
